@@ -1,0 +1,252 @@
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+/* Cards */
+.my-card-wrapper.flex-cont{
+  list-style: initial;
+  /* padding: 0;
+  margin: 0; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /* padding: 5px;   */
+  /* width: 200px;
+  height: 150px; */
+  /* margin-top: 10px; */
+  /* line-height: 150px; */
+  text-align: center;
+}
+
+
+
+.my-card-wrapper {
+  width: 300px;
+  height: 500px;
+  background: white;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0;
+  transform: scale(0.95);
+  transition: box-shadow 0.5s, transform 0.5s;
+}
+.my-card-wrapper:hover {
+  transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+.my-card-wrapper .my-container {
+  width: 100%;
+  height: 100%;
+}
+.my-card-wrapper .my-container .top1 {
+  height: 80%;
+  width: 100%;
+  background:  url(assets/xiaomi.jpg) no-repeat center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.my-card-wrapper .my-container .top2 {
+  height: 80%;
+  width: 100%;
+  background:  url(assets/samsung.jpg) no-repeat center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.my-card-wrapper .my-container .top3 {
+  height: 80%;
+  width: 100%;
+  background:  url(assets/huawei.jpg) no-repeat center center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.my-card-wrapper .my-container .bottom {
+  width: 200%;
+  height: 20%;
+  transition: transform 0.5s;
+}
+.my-card-wrapper .my-container .bottom.clicked {
+  transform: translateX(-50%);
+}
+.my-card-wrapper .my-container .bottom h1 {
+  margin: 0;
+  padding: 0;
+}
+.my-card-wrapper .my-container .bottom p {
+  margin: 0;
+  padding: 0;
+}
+.my-card-wrapper .my-container .bottom .left {
+  height: 100%;
+  width: 50%;
+  background: #f4f4f4;
+  position: relative;
+  float: left;
+}
+.my-card-wrapper .my-container .bottom .left .details {
+  padding: 20px;
+  float: left;
+  width: calc(70% - 40px);
+}
+.my-card-wrapper .my-container .bottom .left .buy {
+  float: right;
+  width: calc(30% - 2px);
+  height: 100%;
+  background: #f1f1f1;
+  transition: background 0.5s;
+  border-left: solid thin rgba(0, 0, 0, 0.1);
+}
+.my-card-wrapper .my-container .bottom .left .buy i {
+  font-size: 30px;
+  padding: 30px;
+  color: #254053;
+  transition: transform 0.5s;
+}
+.my-card-wrapper .my-container .bottom .left .buy:hover {
+  background: #A6CDDE;
+}
+.my-card-wrapper .my-container .bottom .left .buy:hover i {
+  transform: translateY(5px);
+  color: #00394B;
+}
+.my-card-wrapper .my-container .bottom .right {
+  width: 50%;
+  background: #A6CDDE;
+  color: white;
+  float: right;
+  height: 200%;
+  overflow: hidden;
+}
+.my-card-wrapper .my-container .bottom .right .details {
+  padding: 10px;
+  float: right;
+  width: calc(70% - 40px);
+}
+.my-card-wrapper .my-container .bottom .right .done {
+  width: calc(30% - 2px);
+  float: left;
+  transition: transform 0.5s;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+}
+.my-card-wrapper .my-container .bottom .right .done i {
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+.my-card-wrapper .my-container .bottom .right .remove {
+  width: calc(30% - 1px);
+  clear: both;
+  border-right: solid thin rgba(255, 255, 255, 0.3);
+  height: 50%;
+  background: #BC3B59;
+  transition: transform 0.5s, background 0.5s;
+}
+.my-card-wrapper .my-container .bottom .right .remove:hover {
+  background: #9B2847;
+}
+.my-card-wrapper .my-container .bottom .right .remove:hover i {
+  transform: translateY(5px);
+}
+.my-card-wrapper .my-container .bottom .right .remove i {
+  transition: transform 0.5s;
+  font-size: 30px;
+  padding: 30px;
+  color: white;
+}
+.my-card-wrapper .my-container .bottom .right:hover .remove, .my-card-wrapper .my-container .bottom .right:hover .done {
+  transform: translateY(-100%);
+}
+.my-card-wrapper .inside {
+  z-index: 9;
+  background: #92879B;
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  border-radius: 0px 0px 200px 200px;
+  transition: all 0.5s, border-radius 2s, top 1s;
+  overflow: hidden;
+}
+.my-card-wrapper .inside .icon {
+  position: absolute;
+  right: 85px;
+  top: 85px;
+  color: white;
+  opacity: 1;
+}
+.my-card-wrapper .inside:hover {
+  width: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 0;
+  height: 80%;
+}
+.my-card-wrapper .inside:hover .icon {
+  opacity: 0;
+  right: 15px;
+  top: 15px;
+}
+.my-card-wrapper .inside:hover .contents {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+.my-card-wrapper .inside .contents {
+  padding: 5%;
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(-200%);
+  transition: opacity 0.2s, transform 0.8s;
+}
+.my-card-wrapper .inside .contents table {
+  text-align: left;
+  width: 100%;
+}
+.my-card-wrapper .inside .contents h1, .my-card-wrapper .inside .contents p, .my-card-wrapper .inside .contents table {
+  color: white;
+}
+.my-card-wrapper .inside .contents p {
+  font-size: 13px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-gap: 100px;
+  grid-auto-rows: minmax(250px,auto);
+  grid-auto-flow: dense;
+  padding: 10px
+}
+
+.grid-item {
+  padding: 1rem;
+  /* -webkit-perspective: 700px;
+  perspective:700px; */
+}
+
+.py-2.d-none.d-md-inline-block
+{float:left;margin:10px 10px}
